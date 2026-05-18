@@ -94,6 +94,11 @@ public class Agenda {
         System.out.println("────────────────────────────────────────────\n");
     }
 
+    /**
+     * Modifica el número del contacto seleccionado
+     * Debe escribirse el nombre exacto del contacto en la agenda
+     */
+
     public void modificarTelefono(String nombre, String nuevoTelefono) {
 
         for (int i = 0; i < cantidad; i++) {
@@ -112,7 +117,7 @@ public class Agenda {
             }
         }
 
-        System.out.println(" No se encontró el contacto: " + nombre);
+        System.out.println(" No se encontró ningún contacto con el nombre: " + nombre);
     }
 
     /**

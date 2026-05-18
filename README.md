@@ -98,6 +98,7 @@ Incluye métodos como:
 añadirContacto()
 existeContacto()
 listarContactos()
+modificarTelefono()
 buscaContacto()
 eliminarContacto()
 agendaLlena()
@@ -172,6 +173,7 @@ java Main
 5. Eliminar contacto
 6. ¿Está llena la agenda?
 7. Ver espacios libres
+8. Modificar teléfono
 0. Salir
 ```
 
@@ -194,6 +196,7 @@ Durante este proyecto se reforzaron conocimientos sobre:
 ## 🤖 Uso de IA
 
 El desarrollo del proyecto fue realizado utilizando apoyo de Claude AI como herramienta de asistencia para generar documentación del código y depuración de errores.
+Se usó Gemini-code-assist como optimizador de código con la coherencia de código entre colaboradores en su versión incluida de GitHub.
 
 ---
 
@@ -209,7 +212,7 @@ El desarrollo del proyecto fue realizado utilizando apoyo de Claude AI como herr
 
 ---
 
-## 👨‍💻 Autors
+## 👨‍💻 Autores
 
 Iván Kaleb Ramírez Torres  
 Desarrollador Full-Stack Jr. | Java | Backend | QA | APIs REST
