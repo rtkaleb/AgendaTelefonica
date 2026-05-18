@@ -62,8 +62,8 @@ public class Main {
                     Contacto cExiste = new Contacto(nombreExiste, "");
                     boolean existe = agenda.existeContacto(cExiste);
                     System.out.println(existe
-                            ? " El contacto '" + nombreExiste + "' SÍ existe en la agenda."
-                            : " El contacto '" + nombreExiste + "' NO existe en la agenda.");
+                            ? "✅ El contacto '" + nombreExiste + "' SÍ existe en la agenda."
+                            : "❌ El contacto '" + nombreExiste + "' NO existe en la agenda.");
                     break;
 
                 case 3: // Listar contactos
@@ -93,7 +93,7 @@ public class Main {
                             + " de " + agenda.getCapacidad() + " totales.");
                     break;
 
-                case 8:
+                case 8: // Modificar teléfono
 
                     System.out.print("Nombre del contacto: ");
                     String nombreModificar = scanner.nextLine().trim();
