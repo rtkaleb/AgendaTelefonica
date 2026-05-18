@@ -49,17 +49,17 @@ public class Agenda {
      */
     public void añadirContacto(Contacto c) {
         if (agendaLlena()) {
-            System.out.println("⚠️  La agenda está llena. No se puede añadir: " + c.getNombre());
+            System.out.println("La agenda está llena. No se puede añadir: " + c.getNombre());
             return;
         }
         if (existeContacto(c)) {
-            System.out.println("⚠️  El contacto '" + c.getNombre() + "' ya existe en la agenda.");
+            System.out.println("El contacto '" + c.getNombre() + "' ya existe en la agenda.");
             return;
         }
         // Añadimos el contacto en la siguiente posición libre
         contactos[cantidad] = c;
         cantidad++;
-        System.out.println("✅ Contacto añadido: " + c);
+        System.out.println("Contacto añadido: " + c);
     }
 
     /**
@@ -87,7 +87,7 @@ public class Agenda {
             System.out.println("📭 La agenda está vacía.");
             return;
         }
-        System.out.println("\n📒 ── Agenda de contactos ──────────────────");
+        System.out.println("\n── Agenda de contactos ──────────────────");
         for (int i = 0; i < cantidad; i++) {
             System.out.println("  " + (i + 1) + ". " + contactos[i]);
         }
@@ -103,11 +103,11 @@ public class Agenda {
     public void buscaContacto(String nombre) {
         for (int i = 0; i < cantidad; i++) {
             if (contactos[i].getNombre().equalsIgnoreCase(nombre)) {
-                System.out.println("🔍 Contacto encontrado: " + contactos[i]);
+                System.out.println("Contacto encontrado: " + contactos[i]);
                 return;
             }
         }
-        System.out.println("❌ No se encontró ningún contacto con el nombre: " + nombre);
+        System.out.println("No se encontró ningún contacto con el nombre: " + nombre);
     }
 
     /**
@@ -127,11 +127,11 @@ public class Agenda {
                 // Limpiamos la última posición y reducimos el contador
                 contactos[cantidad - 1] = null;
                 cantidad--;
-                System.out.println("🗑️  Contacto eliminado: " + c.getNombre());
+                System.out.println("Contacto eliminado: " + c.getNombre());
                 return;
             }
         }
-        System.out.println("❌ No se encontró el contacto '" + c.getNombre() + "'. No se eliminó nada.");
+        System.out.println("No se encontró el contacto '" + c.getNombre() + "'. No se eliminó nada.");
     }
 
     /**
