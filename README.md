@@ -13,12 +13,13 @@ El objetivo de este hackathon fue desarrollar un sistema que permitiera gestiona
   - Nombre
   - Apellido
   - Número telefónico
-- Dos contactos son iguales si tienen el mismo nombre.
+- Dos contactos son iguales si tienen el mismo nombre y apellido.
 - La agenda tiene una capacidad limitada.
 - La agenda puede crearse:
   - Con tamaño por defecto (10 contactos)
   - Con tamaño personalizado
 - No se permiten contactos duplicados.
+- Puede editarse el número telefónico de un contacto
 - El sistema debe operar mediante un menú interactivo en consola.
 
 ---
@@ -53,7 +54,7 @@ AgendaTelefonica/
 - Añadir contacto
 - Validar contactos duplicados
 - Buscar contacto por nombre
-- Modificar teléfono
+- Modificar teléfono de un contacto existente
 - Eliminar contacto
 - Listar todos los contactos
 
