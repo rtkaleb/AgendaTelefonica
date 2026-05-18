@@ -29,7 +29,7 @@ public class Main {
             System.out.println("Agenda creada con capacidad para " + tamanio + " contactos.\n");
         } else {
             agenda = new Agenda(); // Usa constructor por defecto (10)
-            System.out.println("Agenda creada con capacidad por defecto (10 contactos).\n");
+            System.out.println("Opción incorrecta. Agenda creada con capacidad por defecto (10 contactos).\n");
         }
 
         // ── Bucle del menú principal ───────────────────────────────────────────
