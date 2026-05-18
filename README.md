@@ -1,4 +1,4 @@
-# 📱 AgendaTelefonica
+# 📱 Agenda Telefónica
 
 Sistema de gestión de contactos desarrollado en Java para consola.  
 Este proyecto permite administrar una agenda telefónica con funcionalidades básicas como agregar, buscar, listar y eliminar contactos, aplicando principios de Programación Orientada a Objetos (POO).
@@ -11,13 +11,15 @@ El objetivo de este hackathon fue desarrollar un sistema que permitiera gestiona
 
 - Cada contacto tiene:
   - Nombre
+  - Apellido
   - Número telefónico
-- Dos contactos son iguales si tienen el mismo nombre.
+- Dos contactos son iguales si tienen el mismo nombre y apellido.
 - La agenda tiene una capacidad limitada.
 - La agenda puede crearse:
   - Con tamaño por defecto (10 contactos)
   - Con tamaño personalizado
 - No se permiten contactos duplicados.
+- Puede editarse el número telefónico de un contacto
 - El sistema debe operar mediante un menú interactivo en consola.
 
 ---
@@ -52,6 +54,7 @@ AgendaTelefonica/
 - Añadir contacto
 - Validar contactos duplicados
 - Buscar contacto por nombre
+- Modificar teléfono de un contacto existente
 - Eliminar contacto
 - Listar todos los contactos
 
@@ -70,7 +73,7 @@ AgendaTelefonica/
 
 Representa un contacto telefónico con:
 
-- Nombre
+- Nombre y Apellido
 - Teléfono
 
 Incluye:
@@ -81,7 +84,7 @@ Incluye:
 - `hashCode()`
 - `toString()`
 
-Dos contactos son considerados iguales si tienen el mismo nombre, ignorando mayúsculas y minúsculas.
+Dos contactos son considerados iguales si tienen el mismo nombre y apellido, ignorando mayúsculas y minúsculas.
 
 ---
 
@@ -126,7 +129,7 @@ Incluye:
 ### 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/AgendaTelefonica.git
+git clone https://github.com/USUARIO/AgendaTelefonica.git
 ```
 
 ---
@@ -190,7 +193,7 @@ Durante este proyecto se reforzaron conocimientos sobre:
 
 ## 🤖 Uso de IA
 
-El desarrollo del proyecto fue realizado utilizando apoyo de Claude AI como herramienta de asistencia para generación, explicación y documentación del código.
+El desarrollo del proyecto fue realizado utilizando apoyo de Claude AI como herramienta de asistencia para generar documentación del código y depuración de errores.
 
 ---
 
@@ -208,20 +211,20 @@ El desarrollo del proyecto fue realizado utilizando apoyo de Claude AI como herr
 
 ## 👨‍💻 Autors
 
-Kaleb Torres  
+Iván Kaleb Ramírez Torres  
 Desarrollador Full-Stack Jr. | Java | Backend | QA | APIs REST
 
-Arturo Ramírez  
+José Arturo Ramírez Soto  
 Desarrollador Full-Stack Jr. | Java | Backend | QA | APIs REST
 
-Luis Angel Baca 
+Zared Armando Ortiz González  
 Desarrollador Full-Stack Jr. | Java | Backend | QA | APIs REST
 
-Zared Ortiz
+Luis Angel Baca Hinojosa  
 Desarrollador Full-Stack Jr. | Java | Backend | QA | APIs REST
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto fue desarrollado con fines educativos y de práctica.
+Este proyecto fue desarrollado para el Bootcamp Generation México con fines educativos y de práctica.
