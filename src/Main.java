@@ -12,7 +12,7 @@ public class Main {
 
         // ── Crear la agenda ────────────────────────────────────────────────────
         System.out.println("═══════════════════════════════════════════");
-        System.out.println("      📱 SISTEMA DE AGENDA TELEFÓNICA");
+        System.out.println("      SISTEMA DE AGENDA TELEFÓNICA");
         System.out.println("═══════════════════════════════════════════");
         System.out.println("¿Cómo deseas crear tu agenda?");
         System.out.println("  1. Con tamaño por defecto (10 contactos)");
@@ -26,10 +26,10 @@ public class Main {
             System.out.print("Ingresa el tamaño máximo de tu agenda: ");
             int tamanio = leerEntero(scanner);
             agenda = new Agenda(tamanio);
-            System.out.println("✅ Agenda creada con capacidad para " + tamanio + " contactos.\n");
+            System.out.println("Agenda creada con capacidad para " + tamanio + " contactos.\n");
         } else {
             agenda = new Agenda(); // Usa constructor por defecto (10)
-            System.out.println("✅ Agenda creada con capacidad por defecto (10 contactos).\n");
+            System.out.println("Agenda creada con capacidad por defecto (10 contactos).\n");
         }
 
         // ── Bucle del menú principal ───────────────────────────────────────────
@@ -89,16 +89,16 @@ public class Main {
                     break;
 
                 case 7: // Espacios libres
-                    System.out.println("📊 Espacios libres: " + agenda.espaciosLibres()
+                    System.out.println(" Espacios libres: " + agenda.espaciosLibres()
                             + " de " + agenda.getCapacidad() + " totales.");
                     break;
 
                 case 0: // Salir
-                    System.out.println("\n👋 ¡Hasta luego! Cerrando la agenda...");
+                    System.out.println("\n ¡Hasta luego! Cerrando la agenda.");
                     break;
 
                 default:
-                    System.out.println("⚠️  Opción no válida. Por favor elige entre 0 y 7.");
+                    System.out.println("Opción no válida. Por favor elige entre 0 y 7.");
             }
 
             System.out.println(); // Línea en blanco para separar iteraciones
@@ -135,7 +135,7 @@ public class Main {
      */
     private static int leerEntero(Scanner scanner) {
         while (!scanner.hasNextInt()) {
-            System.out.print("⚠️  Ingresa un número válido: ");
+            System.out.print(" Ingresa un número válido: ");
             scanner.next(); // Descarta el token inválido
         }
         int numero = scanner.nextInt();
