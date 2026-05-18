@@ -62,8 +62,8 @@ public class Main {
                     Contacto cExiste = new Contacto(nombreExiste, "");
                     boolean existe = agenda.existeContacto(cExiste);
                     System.out.println(existe
-                            ? "✅ El contacto '" + nombreExiste + "' SÍ existe en la agenda."
-                            : "❌ El contacto '" + nombreExiste + "' NO existe en la agenda.");
+                            ? " El contacto '" + nombreExiste + "' SÍ existe en la agenda."
+                            : " El contacto '" + nombreExiste + "' NO existe en la agenda.");
                     break;
 
                 case 3: // Listar contactos
@@ -93,12 +93,24 @@ public class Main {
                             + " de " + agenda.getCapacidad() + " totales.");
                     break;
 
+                case 8:
+
+                    System.out.print("Nombre del contacto: ");
+                    String nombreModificar = scanner.nextLine().trim();
+
+                    System.out.print("Nuevo teléfono: ");
+                    String nuevoTelefono = scanner.nextLine().trim();
+
+                    agenda.modificarTelefono(nombreModificar, nuevoTelefono);
+
+                    break;
+
                 case 0: // Salir
                     System.out.println("\n ¡Hasta luego! Cerrando la agenda.");
                     break;
 
                 default:
-                    System.out.println("Opción no válida. Por favor elige entre 0 y 7.");
+                    System.out.println("Opción no válida. Por favor elige entre 0 y 8.");
             }
 
             System.out.println(); // Línea en blanco para separar iteraciones
@@ -121,6 +133,7 @@ public class Main {
         System.out.println("  5. Eliminar contacto");
         System.out.println("  6. ¿Está llena la agenda?");
         System.out.println("  7. Ver espacios libres");
+        System.out.println("  8. Modificar teléfono");
         System.out.println("  0. Salir");
         System.out.println("────────────────────────────────────────────");
         System.out.print("Elige una opción: ");
