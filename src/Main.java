@@ -41,11 +41,19 @@ public class Main {
             switch (opcion) {
 
                 case 1: // Añadir contacto
-                    System.out.print("Nombre del contacto: ");
-                    String nombreAdd = scanner.nextLine().trim();
-                    System.out.print("Teléfono: ");
+                    System.out.print("Nombre(s): ");
+                    String nombre = scanner.nextLine().trim();
+
+                    System.out.print("Apellido(s): ");
+                    String apellido = scanner.nextLine().trim();
+
+                    System.out.print("Teléfono Celular: ");
                     String telefonoAdd = scanner.nextLine().trim();
-                    agenda.añadirContacto(new Contacto(nombreAdd, telefonoAdd));
+
+                    // Unir nombre y apellido
+                    String nombreCompleto = nombre + " " + apellido;
+
+                    agenda.añadirContacto(new Contacto(nombreCompleto, telefonoAdd));
                     break;
 
                 case 2: // Verificar si existe un contacto
