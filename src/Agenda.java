@@ -94,6 +94,27 @@ public class Agenda {
         System.out.println("────────────────────────────────────────────\n");
     }
 
+    public void modificarTelefono(String nombre, String nuevoTelefono) {
+
+        for (int i = 0; i < cantidad; i++) {
+
+            if (contactos[i].getNombre().equalsIgnoreCase(nombre)) {
+
+                contactos[i].setTelefono(nuevoTelefono);
+
+                System.out.println("✅ Teléfono actualizado correctamente.");
+                System.out.println("📞 Nuevo teléfono de "
+                        + contactos[i].getNombre()
+                        + ": "
+                        + contactos[i].getTelefono());
+
+                return;
+            }
+        }
+
+        System.out.println(" No se encontró el contacto: " + nombre);
+    }
+
     /**
      * Busca un contacto por nombre y muestra su teléfono.
      * La búsqueda no distingue entre mayúsculas y minúsculas.
