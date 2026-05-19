@@ -6,9 +6,9 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Metodo principal: punto de entrada del programa
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);  // Crea un objeto Scanner para leer datos del usuario
 
         // ── Crear la agenda ────────────────────────────────────────────────────
         System.out.println("═══════════════════════════════════════════");
@@ -19,26 +19,26 @@ public class Main {
         System.out.println("  2. Con tamaño personalizado");
         System.out.print("Elige una opción: ");
 
-        Agenda agenda;
-        int opcionInicio = leerEntero(scanner);
+        Agenda agenda; // Declara la variable agenda
+        int opcionInicio = leerEntero(scanner);  // Lee un entero usando el metodo seguro leerEntero()
 
-        if (opcionInicio == 2) {
+        if (opcionInicio == 2) { // Si el usuario eligió opción 2
             System.out.print("Ingresa el tamaño máximo de tu agenda: ");
-            int tamanio = leerEntero(scanner);
-            agenda = new Agenda(tamanio);
+            int tamanio = leerEntero(scanner); // Guarda el tamaño ingresado
+            agenda = new Agenda(tamanio);  // Crea agenda con tamaño personalizado
             System.out.println("Agenda creada con capacidad para " + tamanio + " contactos.\n");
         } else {
             agenda = new Agenda(); // Usa constructor por defecto (10)
-            System.out.println("Opción incorrecta. Agenda creada con capacidad por defecto (10 contactos).\n");
+            System.out.println("Agenda creada con capacidad por defecto (10 contactos).\n");
         }
 
         // ── Bucle del menú principal ───────────────────────────────────────────
-        int opcion = -1;
-        while (opcion != 0) {
-            mostrarMenu();
-            opcion = leerEntero(scanner);
+        int opcion = -1; // Variable que guarda la opción elegida en el menú
+        while (opcion != 0) {   // Ciclo que se ejecuta hasta que el usuario elija 0
+            mostrarMenu(); // Muestra el menú
+            opcion = leerEntero(scanner);  // Lee la opción elegida
 
-            switch (opcion) {
+            switch (opcion) { // Evalúa la opción seleccionada
 
                 case 1: // Añadir contacto
                     System.out.print("Nombre(s): ");
@@ -50,40 +50,40 @@ public class Main {
                     System.out.print("Teléfono Celular: ");
                     String telefonoAdd = scanner.nextLine().trim();
 
-                    // Unir nombre y apellido
+                    // Une nombre y apellido
                     String nombreCompleto = nombre + " " + apellido;
 
-                    agenda.añadirContacto(new Contacto(nombreCompleto, telefonoAdd));
+                    agenda.añadirContacto(new Contacto(nombreCompleto, telefonoAdd)); // Crea un nuevo contacto y lo agrega a la agenda
                     break;
 
                 case 2: // Verificar si existe un contacto
-                    System.out.print("Nombre del contacto a buscar: ");
-                    String nombreExiste = scanner.nextLine().trim();
-                    Contacto cExiste = new Contacto(nombreExiste, "");
-                    boolean existe = agenda.existeContacto(cExiste);
+                    System.out.print("Nombre del contacto a buscar: "); // Solicita nombre a buscar
+                    String nombreExiste = scanner.nextLine().trim();   // Lee el nombre
+                    Contacto cExiste = new Contacto(nombreExiste, ""); // Crea un contacto temporal
+                    boolean existe = agenda.existeContacto(cExiste); // Verifica si existe en la agenda
                     System.out.println(existe
                             ? "✅ El contacto '" + nombreExiste + "' SÍ existe en la agenda."
                             : "❌ El contacto '" + nombreExiste + "' NO existe en la agenda.");
                     break;
 
                 case 3: // Listar contactos
-                    agenda.listarContactos();
+                    agenda.listarContactos(); // Muestra todos los contactos
                     break;
 
                 case 4: // Buscar contacto por nombre
                     System.out.print("Nombre a buscar: ");
-                    String nombreBusca = scanner.nextLine().trim();
-                    agenda.buscaContacto(nombreBusca);
+                    String nombreBusca = scanner.nextLine().trim(); // Lee el nombre
+                    agenda.buscaContacto(nombreBusca);  // Busca el contacto
                     break;
 
                 case 5: // Eliminar contacto
                     System.out.print("Nombre del contacto a eliminar: ");
                     String nombreElim = scanner.nextLine().trim();
-                    agenda.eliminarContacto(new Contacto(nombreElim, ""));
+                    agenda.eliminarContacto(new Contacto(nombreElim, "")); // Elimina el contacto
                     break;
 
                 case 6: // ¿Agenda llena?
-                    System.out.println(agenda.agendaLlena()
+                    System.out.println(agenda.agendaLlena() // Usa operador ternario para imprimir estado
                             ? "🔴 La agenda está LLENA (" + agenda.getCapacidad() + "/" + agenda.getCapacidad() + ")."
                             : "🟢 La agenda NO está llena (" + agenda.getCantidad() + "/" + agenda.getCapacidad() + ").");
                     break;
@@ -109,14 +109,14 @@ public class Main {
                     System.out.println("\n ¡Hasta luego! Cerrando la agenda.");
                     break;
 
-                default:
+                default: //En caso de opción inválida
                     System.out.println("Opción no válida. Por favor elige entre 0 y 8.");
             }
 
             System.out.println(); // Línea en blanco para separar iteraciones
         }
 
-        scanner.close();
+        scanner.close(); //Cerramos scanner para liberar recursos
     }
 
     // ─── Métodos auxiliares ───────────────────────────────────────────────────
@@ -124,7 +124,7 @@ public class Main {
     /**
      * Muestra el menú de opciones por consola.
      */
-    private static void mostrarMenu() {
+    private static void mostrarMenu() { //Metodo
         System.out.println("─── MENÚ AGENDA ────────────────────────────");
         System.out.println("  1. Añadir contacto");
         System.out.println("  2. Verificar si existe un contacto");
@@ -147,11 +147,11 @@ public class Main {
      * @return El entero leído.
      */
     private static int leerEntero(Scanner scanner) {
-        while (!scanner.hasNextInt()) {
-            System.out.print(" Ingresa un número válido: ");
+        while (!scanner.hasNextInt()) { // Mientras no haya entero válido
+            System.out.print(" Ingresa un número válido: "); // Mensaje de error
             scanner.next(); // Descarta el token inválido
         }
-        int numero = scanner.nextInt();
+        int numero = scanner.nextInt(); // Guardamos el entero válido
         scanner.nextLine(); // Limpia el salto de línea pendiente
         return numero;
     }
