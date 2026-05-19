@@ -66,6 +66,12 @@ AgendaTelefonica/
 - Consultar espacios disponibles
 
 ---
+## Capturas de Pantalla de Consola
+
+![Menu inicial](images/menu1.png)
+![Menú de edición](images/menu2.png)
+
+---
 
 ## 🧠 Conceptos implementados
 

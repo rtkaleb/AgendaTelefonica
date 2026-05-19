@@ -1,13 +1,13 @@
 /**
  * Clase que representa un contacto de la agenda.
- * Un contacto tiene un nombre y un número de teléfono.
- * Dos contactos son iguales si tienen el mismo nombre (sin importar el teléfono).
+ * Un contacto tiene un nombre, un apellido y un número de teléfono.
+ * Dos contactos son iguales si tienen el mismo nombre y el mismo apellido (sin importar el teléfono).
  */
 public class Contacto {
 
     // Atributos del contacto
-    private String nombre;
-    private String telefono;
+    private String nombre; // Variable que almacena el nombre de contacto
+    private String telefono; // Esta almacena su telèfono
 
     /**
      * Constructor que inicializa un contacto con nombre y teléfono.
@@ -16,7 +16,7 @@ public class Contacto {
      * @param telefono El número de teléfono del contacto.
      */
     public Contacto(String nombre, String telefono) {
-        this.nombre = nombre;
+        this.nombre = nombre; // Guardamos datos
         this.telefono = telefono;
     }
 
@@ -25,7 +25,7 @@ public class Contacto {
     /**
      * @return El nombre del contacto.
      */
-    public String getNombre() {
+    public String getNombre() { // Permite obtener el nombre desde fuera de la clase
         return nombre;
     }
 
@@ -43,8 +43,8 @@ public class Contacto {
      *
      * @param nombre El nuevo nombre.
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String nombre) { // Permite modificar el nombre
+        this.nombre = nombre; // Reemplaza
     }
 
     /**
@@ -52,7 +52,7 @@ public class Contacto {
      *
      * @param telefono El nuevo teléfono.
      */
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono) { // Permite
         this.telefono = telefono;
     }
 
